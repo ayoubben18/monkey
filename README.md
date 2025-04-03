@@ -61,6 +61,11 @@ and the test file
 > lexer/lexer_test.go
 
 
+> [!NOTE]
+> to identify keywords and variable names, we keep reading from the input when we first encounter a letter. until we encounter a non-letter character. that way we can identify the whole identifier.
 
 
-
+>[!WARNING]
+>The early exit in `NewToken()` default case, our return tok statement, is necessary because when calling readIdentifier(), we call readChar() repeatedly and advance our readPosition and position fields past
+the last character of the current identifier. So we don’t need the call to readChar() after the
+switch statement again
