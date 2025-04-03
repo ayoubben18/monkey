@@ -49,3 +49,18 @@ type Token struct {
 
 >[!IMPORTANT]
 > in a production environment it makes sense to attach filenames and line numbers to tokens, to better track down lexing and parsing errors. So it would be better to initialize the lexer with an io.Reader and the filename. But since that would add more complexity we’re not here to handle, we’ll start small and just use a string and ignore filenames and line numbers.
+
+
+### Lexer:
+
+We gonna have one simple method on our lexer which is `NextToken()` that will return the next token in the input string.
+
+inside the folder `lexer` you can find the lexer implementation
+> lexer/lexer.go
+and the test file
+> lexer/lexer_test.go
+
+
+
+
+

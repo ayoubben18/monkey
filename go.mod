@@ -1,3 +1,3 @@
-module github.com/ayoubben18/monkey
+module monkey
 
 go 1.24.0
